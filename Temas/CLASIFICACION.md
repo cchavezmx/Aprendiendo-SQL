@@ -1,4 +1,4 @@
-## SQL Lección 4: Filtrado y clasificación de resultados de consultas
+## [SQL Lección 4: Filtrado y clasificación de resultados de consultas](https://sqlbolt.com/lesson/filtering_sorting_query_results)
 
 Anque los datos en una base de datos pueden ser únicos, hay ocaciones donde es necesarios agruparlos o filtrar datos repetidos, exploremos algunas de estas técnicas.
 
@@ -32,6 +32,7 @@ SELECT column, another_column, … FROM mytable WHERE condition(s) ORDER BY colu
 
 ### Ejercicios 🏋️‍♀️
 
-- lista de todos los directores de Pixar sin duplicados
-- lista de todos los directores de Pixar sin duplicados ordenados alfabéticamente
-- Lista las próximas 5 películas de Pixar ordenadas alfabéticamente
+- Lista de todos los directores de películas de Pixar (alfabéticamente), sin duplicados ✓
+- Enumere las últimas cuatro películas de Pixar lanzadas (ordenadas de la más reciente a la menos) ✓
+- Enumere las primeras cinco películas de Pixar ordenadas alfabéticamente ✓
+- Enumere las próximas cinco películas de Pixar ordenadas alfabéticamente ✓

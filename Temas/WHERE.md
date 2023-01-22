@@ -1,4 +1,4 @@
-## SQL Lección 2: Consultas con restricciones (Pt. 1)
+## [SQL Lección 2: Consultas con restricciones (Pt. 1)](https://sqlbolt.com/lesson/select_queries_with_constraints)
 
 Ahora que ya sabemos cómo seleccionar datos de una tabla, vamos a aprender cómo filtrar los resultados de nuestras consultas. Para ello, usaremos la cláusula WHERE.
 
