@@ -47,7 +47,9 @@ Ademas que en esta repo encontraras un archivo llamado `database.sql` que contie
 ## Lecciones 📖
 
 - [SQL Lección 1: Consultas SELECT 101](./Temas/SELECT.md)
-- [SQL Lección 2: Consutlas con Restricciones P1 ](./Temas/SELECT%20FROM%20MULTIPLE%20TABLES.md)
+- [SQL Lección 2: Consutlas con Restricciones P1 ](./Temas/WHERE.md)
+- [SQL Lección 3: Consutlas con Restricciones P2](./Temas/OPERADORES.md)
+- [SQL Lección 4: Filtrado y clasificación de resultados de consultas](./Temas/CLASIFICACION.md)
 
 ## El Proyecto 🚀
 

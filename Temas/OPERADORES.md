@@ -1,4 +1,4 @@
-## SQL Lección 2: Consultas con restricciones (Pt. 1)
+## SQL Lección 3: Consultas con restricciones (Pt. 1)
 
 Los operaradores nos permiten comparar valores y devolver un valor booleano (verdadero o falso), algunos de estos operados son case sensitive, es decir, distinguen entre mayúsculas y minúsculas, veamos alugnos de ellos:
 
