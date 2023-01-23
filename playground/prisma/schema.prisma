@@ -8,9 +8,10 @@ datasource db {
 }
 
 model movies {
-  id             Int     @id @default(autoincrement())
+  id             Int       @id @default(autoincrement())
   title          String?
   director       String?
   year           String?
   length_minutes Int?
+  time_created   DateTime? @db.Date
 }

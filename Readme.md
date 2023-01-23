@@ -51,7 +51,11 @@ Ademas que en esta repo encontraras un archivo llamado `database.sql` que contie
 - [SQL Lección 3: Consutlas con Restricciones P2](./Temas/Leccion_03.md)
 - [SQL Lección 4: Filtrado y clasificación de resultados de consultas](./Temas/Leccion_04.md)
 
-## El Proyecto 🚀
+## Creando mi primera base de datos 📚
+
+Para esta parte del proyecto usaremos Realway APP para crear nuestra base de datos, para crear una base de datos, usa el archivo `database.sql` que se encuentra en esta repo, puedes usar este base de datos para hacer los ejercicios de las lecciones y el proyecto.
+
+## El Proyecto - my IMDB 🚀
 
 En la carpeta de playground, encontrarás un proyecto basado en Nexjs (Node + React), que te ayudará a practicar lo que has aprendido hasta ahora. Para ejecutar el proyecto, sigue estos pasos:
 
@@ -61,7 +65,7 @@ En la carpeta de playground, encontrarás un proyecto basado en Nexjs (Node + Re
 
 El proyecto usa Primsa para conectarse a la base de datos
 
-- [Primsa Get started](https://www.prisma.io/docs/getting-started)
+- [Prisma Get started](https://www.prisma.io/docs/getting-started)
 
 ---
 
@@ -96,8 +100,6 @@ npx prisma init
 - Paso 1: Introspección de la base de datos
 
 La introspección de la base de datos en Prisma es un proceso mediante el cual se analiza la estructura de una base de datos existente y se genera automáticamente un esquema de datos en el lenguaje de programación utilizado en tu aplicación. Este esquema de datos es utilizado para interactuar con la base de datos mediante el cliente de Prisma.
-
-La introspección se realiza mediante el uso de la herramienta Prisma CLI, que se conecta a la base de datos y examina las tablas, columnas, relaciones y restricciones existentes para generar automáticamente un esquema de datos. Este esquema se almacena en un archivo de configuración llamado "schema.prisma" que se utiliza para generar el código para interactuar con la base de datos.
 
 ```bash
 npx prisma db pull

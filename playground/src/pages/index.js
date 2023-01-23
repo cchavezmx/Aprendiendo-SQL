@@ -1,11 +1,16 @@
 import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
+import Card from '@/components/Card'
 import { prismaDB } from '@/db'
+import Router from 'next/router'
 
 
 export default function Home({ movies }) {
 
-  console.log(movies)
+  const router = Router;
+  const handledMoreMovies = async () => {
+    router.replace(router.asPath);
+  }
+  
   return (
     <>
       <Head>
@@ -14,26 +19,26 @@ export default function Home({ movies }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        {
-          movies.map(movie => (
-            <div key={movie.id}>
-              <h1>{movie.title}</h1>
-              <p>{movie.director}</p>
-              <p>{movie.year}</p>              
-            </div>
-          ))
-        }
-      </main>
+      <main>
+      <nav className="bg-[#8F37FF] w-screen text-white">
+        <h1 className='p-4 text-5xl text-center'>Dev.F IMDB</h1>        
+      </nav>
+      <section className='productos gap-1'>
+          { movies.map((movie) => <Card key={movie.id} movie={movie} />)}
+      </section>
+      <button 
+      onClick={() => handledMoreMovies()}
+      className='bg-[#8F37FF] text-white p-4 rounded-lg text-2xl'>Añadir película</button>
+    </main>
     </>
   )
 }
 
 export async function getStaticProps() {  
-  const movies = await prismaDB.movies.findMany()
+  const movies = await prismaDB.movies.findMany({ orderBy: { id: 'desc' } })  
   return {
     props: {
-      movies
+      movies: JSON.parse(JSON.stringify(movies))
     }
   }
 
