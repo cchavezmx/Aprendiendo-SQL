@@ -1,6 +1,6 @@
 
 -- create TABLE MOVIES
-CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, director TEXT, year TEXT, length_minutes INTEGER)
+CREATE TABLE movies (id SERIAL PRIMARY KEY, title TEXT, director TEXT, year TEXT, length_minutes INTEGER)
 
 
 -- create INSERT QUERY INTO MOVIES TABLE

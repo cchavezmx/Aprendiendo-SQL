@@ -46,15 +46,79 @@ Ademas que en esta repo encontraras un archivo llamado `database.sql` que contie
 
 ## Lecciones 📖
 
-- [SQL Lección 1: Consultas SELECT 101](./Temas/SELECT.md)
-- [SQL Lección 2: Consutlas con Restricciones P1 ](./Temas/WHERE.md)
-- [SQL Lección 3: Consutlas con Restricciones P2](./Temas/OPERADORES.md)
-- [SQL Lección 4: Filtrado y clasificación de resultados de consultas](./Temas/CLASIFICACION.md)
+- [SQL Lección 1: Consultas SELECT 101](./Temas/Leccion_01.md)
+- [SQL Lección 2: Consutlas con Restricciones P1 ](./Temas/Leccion_02.md)
+- [SQL Lección 3: Consutlas con Restricciones P2](./Temas/Leccion_03.md)
+- [SQL Lección 4: Filtrado y clasificación de resultados de consultas](./Temas/Leccion_04.md)
 
 ## El Proyecto 🚀
 
-En la carpeta de ReactSQL, encontrarás un proyecto basado en Node, Express y React, que te ayudará a practicar lo que has aprendido hasta ahora. Para ejecutar el proyecto, sigue estos pasos:
+En la carpeta de playground, encontrarás un proyecto basado en Nexjs (Node + React), que te ayudará a practicar lo que has aprendido hasta ahora. Para ejecutar el proyecto, sigue estos pasos:
 
     cd ReactSQL
     npm install
-    npm start
+    npm run dev
+
+El proyecto usa Primsa para conectarse a la base de datos
+
+- [Primsa Get started](https://www.prisma.io/docs/getting-started)
+
+---
+
+## Guia para Integrar Prisma ![](assets/prisma-3.svg)
+
+- Paso 1: Instalar Prisma
+
+```bash
+npm install prisma --save-dev
+
+```
+
+- Paso 2: Crear el archivo de configuración de Prisma
+
+```bash
+npx prisma init
+```
+
+- Paso 3: Conexion a la base de datos
+- Añade tu url en el archivo `.env` y en el archivo `prisma/schema.prisma`
+
+```javascript
+    // 📂 prisma/schema.prisma
+    datasource db {
+        provider = "postgresql"
+        url      = env("DATABASE_URL")
+    }
+```
+
+## Introspección de la base de datos
+
+- Paso 1: Introspección de la base de datos
+
+La introspección de la base de datos en Prisma es un proceso mediante el cual se analiza la estructura de una base de datos existente y se genera automáticamente un esquema de datos en el lenguaje de programación utilizado en tu aplicación. Este esquema de datos es utilizado para interactuar con la base de datos mediante el cliente de Prisma.
+
+La introspección se realiza mediante el uso de la herramienta Prisma CLI, que se conecta a la base de datos y examina las tablas, columnas, relaciones y restricciones existentes para generar automáticamente un esquema de datos. Este esquema se almacena en un archivo de configuración llamado "schema.prisma" que se utiliza para generar el código para interactuar con la base de datos.
+
+```bash
+npx prisma db pull
+```
+
+Este comando lee la variable de entorno DATABASE_URL que está definida en .env y se conecta a su base de datos. Una vez que se establece la conexión, realiza una introspección de la base de datos (es decir, lee el esquema de la base de datos). Luego traduce el esquema de la base de datos de SQL a un modelo de datos Prisma.
+
+---
+
+## ¿Por qué usar un ORM?
+
+Un ORM (Object-Relational Mapping) es una técnica de programación que permite interactuar con una base de datos utilizando código en lenguaje de programación en lugar de utilizar consultas SQL. Los ORM son útiles por varias razones:
+
+- Abstracción de la base de datos: Un ORM permite trabajar con una abstracción de la base de datos en lenguaje de programación en lugar de tener que escribir consultas SQL, lo que puede ser más fácil y legible para los desarrolladores.
+
+- Portabilidad: Al utilizar un ORM, el código se vuelve menos dependiente del sistema de gestión de bases de datos subyacente, lo que facilita la migración a otro sistema de gestión de bases de datos en el futuro.
+
+- Seguridad: Los ORM proporcionan mecanismos de seguridad incorporados para prevenir inyección SQL y otras vulnerabilidades de seguridad comunes.
+
+- Productividad: Los ORM automatizan tareas comunes como la generación de código para realizar operaciones CRUD (crear, leer, actualizar y eliminar) en la base de datos, lo que puede ahorrar tiempo y esfuerzo para los desarrolladores.
+
+- Mejora en el diseño: El uso de un ORM promueve el uso de patrones de diseño orientado a objetos, lo que puede mejorar la arquitectura y el diseño de la aplicación en general.
+
+En resumen, los ORM son una herramienta muy útil para los desarrolladores ya que ayudan a simplificar el trabajo con bases de datos, mejoran la seguridad, aumentan la productividad, y mejoran el diseño de la aplicación.
